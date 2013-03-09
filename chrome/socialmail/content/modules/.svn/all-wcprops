@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/subversion/!svn/ver/390/SocialMail/srcExtension/chrome/socialmail/content/modules
+END
+dlg_tweet.xul
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/subversion/!svn/ver/313/SocialMail/srcExtension/chrome/socialmail/content/modules/dlg_tweet.xul
+END
+twitter.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/subversion/!svn/ver/406/SocialMail/srcExtension/chrome/socialmail/content/modules/twitter.js
+END
+dlg_tweet.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/subversion/!svn/ver/400/SocialMail/srcExtension/chrome/socialmail/content/modules/dlg_tweet.js
+END
+addressBook.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/subversion/!svn/ver/390/SocialMail/srcExtension/chrome/socialmail/content/modules/addressBook.js
+END
+twitterPrefs.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/subversion/!svn/ver/334/SocialMail/srcExtension/chrome/socialmail/content/modules/twitterPrefs.js
+END
+emailTab.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/subversion/!svn/ver/401/SocialMail/srcExtension/chrome/socialmail/content/modules/emailTab.js
+END

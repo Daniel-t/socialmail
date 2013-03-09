@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/subversion/!svn/ver/390/SocialMail/srcExtension/chrome/socialmail/content
+END
+sm_storage.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/subversion/!svn/ver/388/SocialMail/srcExtension/chrome/socialmail/content/sm_storage.js
+END
+about.css
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/about.css
+END
+sm_interface.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/subversion/!svn/ver/390/SocialMail/srcExtension/chrome/socialmail/content/sm_interface.js
+END
+socialMail.xul
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/subversion/!svn/ver/401/SocialMail/srcExtension/chrome/socialmail/content/socialMail.xul
+END
+sm_freqgraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/subversion/!svn/ver/383/SocialMail/srcExtension/chrome/socialmail/content/sm_freqgraph.js
+END
+socialMailPrefs.xul
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/subversion/!svn/ver/386/SocialMail/srcExtension/chrome/socialmail/content/socialMailPrefs.xul
+END
+about.xul
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/about.xul
+END
+sm_gravatar.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/sm_gravatar.js
+END
+svg-graph.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/subversion/!svn/ver/383/SocialMail/srcExtension/chrome/socialmail/content/svg-graph.xml
+END
+emailGrabber.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/subversion/!svn/ver/401/SocialMail/srcExtension/chrome/socialmail/content/emailGrabber.js
+END
+socialMail.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/subversion/!svn/ver/402/SocialMail/srcExtension/chrome/socialmail/content/socialMail.js
+END
+graph.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/graph.properties
+END
+MD5.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/MD5.js
+END
+timeEntry.xbl
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/subversion/!svn/ver/386/SocialMail/srcExtension/chrome/socialmail/content/timeEntry.xbl
+END
+socialMail.css
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/subversion/!svn/ver/386/SocialMail/srcExtension/chrome/socialmail/content/socialMail.css
+END
+dlg_modifyEntry.xul
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/dlg_modifyEntry.xul
+END
+timeEntry.css
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/subversion/!svn/ver/386/SocialMail/srcExtension/chrome/socialmail/content/timeEntry.css
+END
+dlg_modifyEntry.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/subversion/!svn/ver/295/SocialMail/srcExtension/chrome/socialmail/content/dlg_modifyEntry.js
+END

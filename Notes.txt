@@ -1,0 +1,16 @@
+Release notes:
+
+Fixed an issue which caused the no profile image not to be displayed when offline
+
+To Do
+sm_interface:226 skype actuator
+	allow skype names to be called, not just numbers
+	should be easy, just need to catch strings with 
+		alpha characters and then not add the international CC
+		
+Collapsable panels, needs to be persistent across actions
+[+] sign to add details (particularly when none present)
+Allow custom ordering of panels
+
+Useful bits
+window.opener.com.networklighthouse.socialMail.twitter.getTimeline()

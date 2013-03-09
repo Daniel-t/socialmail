@@ -1,0 +1,93 @@
+@CHARSET "ISO-8859-1";
+
+[status="off"] {
+    display: none;
+}
+ 
+.hover {
+	cursor: pointer;
+}
+
+.hoverParent box,
+.hoverParent vbox,
+.hoverParent hbox,
+.hoverParent listboxbody {
+	cursor: inherit;
+}
+
+.hoverParent *[context=""] {
+	cursor: default;
+}
+
+.hoverParent * {
+	cursor: pointer;
+}
+
+.errorParent * {
+	color: red;
+	font-weight: bold;
+}
+
+.statusDate,
+.tweetDate {
+	font-size: 0.8em;
+	text-align: right;
+}
+
+.header {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+listitem.sm_tweetBox {
+	border-style:dotted;
+	border-color:grey 
+}
+
+.smtabs {
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+  /* --- jquery.bargraph.js --- */
+.bar-graph { background-color:#03198D; min-width:4px}  
+.bar-graphNight {background-color:rgb(175,175,175)}
+
+.bar-graphLabel {font-size:75%; text-align:center; background-color:rgb(200,200,200)}
+
+.centre {text-align:center}
+.left {text-align:left}
+.right {text-align:right}
+
+/* --- svg graph stuff */
+svg-graph {
+	-moz-binding: url("svg-graph.xml#graph");
+	-moz-user-focus: normal;
+	stroke-width: 4px;
+	font-family: Lucida Grande,Geneva,Verdana,Arial,Helvetica,sans-serif;
+}
+
+timeEntry{
+	-moz-binding: url("timeEntry.xbl#default");
+	-moz-user-focus: normal;
+	stroke-width: 4px;
+	font-family: Lucida Grande,Geneva,Verdana,Arial,Helvetica,sans-serif;
+}
+
+
+.timeEntry{
+	-moz-binding: url("timeEntry.xbl#default");
+	-moz-user-focus: normal;
+	stroke-width: 4px;
+	font-family: Lucida Grande,Geneva,Verdana,Arial,Helvetica,sans-serif;
+}
+
+
+box.timeEntry {
+	-moz-binding: url("timeEntry.xbl#default");
+	-moz-user-focus: normal;
+	stroke-width: 4px;
+	font-family: Lucida Grande,Geneva,Verdana,Arial,Helvetica,sans-serif;
+}

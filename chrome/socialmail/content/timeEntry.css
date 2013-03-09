@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.dateText {
+	font-size: 0.8em;
+	text-align: right;
+}
+
+.entryBox {
+	border-style: inset;
+	border-width: 1px;
+	margin-top: 4px;
+	background-color: #CCCCCC;
+}
+
+.descBox {
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:2px;
+	padding-right:2px;
+}
+.entryBox:hover {
+background-color: #BBBBBB;
+}
+
+.entryBoxImage {
+    margin: 2px;
+}

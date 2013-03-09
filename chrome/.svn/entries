@@ -1,0 +1,34 @@
+10
+
+dir
+390
+http://www.webpersona.org/subversion/SocialMail/srcExtension/chrome
+http://www.webpersona.org/subversion
+
+
+
+2011-06-26T11:14:12.723781Z
+390
+daniel
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+baf36066-556d-0410-99f4-b1da53b8856a
+
+resources
+dir
+
+socialmail
+dir
+

@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+	<!--DOCTYPE window SYSTEM "chrome://socia/locale/rap4tb.dtd"-->
+
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://messenger/skin/prefPanels.css" type="text/css"?>
+<?xml-stylesheet href="chrome://communicator/skin/pref/pref.css" type="text/css"?>
+
+<prefwindow id="socialMailPrefs"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="Social Mail Preferences">
+
+	<!-- Create a new pane (tab) for SocialMail. -->
+	<prefpane id="socialMailPane" label="SocialMail Options"
+		image="chrome://socialMail/content/media/logo32.png">
+
+		<!-- Intermediary between GUI and preferences system -->
+		<preferences>
+			<!-- see the next section for more information -->
+			<preference id="cacheDays" name="extensions.socialmail.cacheDays"
+				type="int" />
+			<preference id="imagePrefSrc" name="extensions.socialmail.imagePrefSrc"
+				type="string" />
+			<preference id="gravatarDefault" name="extensions.socialmail.gravatarDefault"
+				type="string" />
+			<preference id="updateABPic" name="extensions.socialmail.updateABPic" type="bool" />
+			<preference id="msgQueryLimit" name="extensions.socialmail.msgQueryLimit"
+				type="int" />
+
+			<preference id="do_PhoneAB" name="extensions.socialmail.do_PhoneAB"
+				type="bool" />
+			<preference id="do_PhoneCollected" name="extensions.socialmail.do_PhoneCollected"
+				type="bool" />
+			<preference id="do_Socials" name="extensions.socialmail.do_Socials"
+				type="bool" />
+			<preference id="do_PrevEmails" name="extensions.socialmail.do_PrevEmails"
+				type="bool" />
+			<preference id="do_Files" name="extensions.socialmail.do_Files"
+				type="bool" />
+			<preference id="do_URLs" name="extensions.socialmail.do_URLs" type="bool" />
+			<preference id="do_URLAB" name="extensions.socialmail.do_URLAB" type="bool" />
+
+		</preferences>
+
+		<vbox class="inset">
+			<hbox>
+				<label id="cacheLabel" value="Number of days to cache" />
+				<textbox preference="cacheDays" id="cacheDaysField" size="1"
+					maxlength="2" />
+			</hbox>
+			<label id="cacheDescLabel"
+				value="Length of time before updating info from the internet, 0 to disable" />
+		</vbox>
+		<vbox class="inset">
+			<grid>
+			<columns>
+			<column></column>
+			<column flex="1"></column>
+			</columns>
+			<rows>	
+			<row>
+				<label id="imageLabel" value="Preferred Image Source" />
+				<menulist preference="imagePrefSrc" id="imagePrefField">
+					<menupopup>
+						<menuitem label="FaceBook" value="facebook.com" />
+						<menuitem label="LinkedIn" value="linkedin.com" />
+						<menuitem label="MySpace" value="myspace.com" />
+						<menuitem label="Gravatar" value="gravatar.com" />
+						<menuitem label="No Image" value="no_image" />
+					</menupopup>
+				</menulist>
+			</row>
+			<row>
+				<label id="gravLabel" value="Gravatar default" tooltiptext="Gravatar is used as a last resort, so you'll always get an image"/>
+				<menulist preference="gravatarDefault" id="gravPrefField">
+					<menupopup>
+						<menuitem label="MonsterID" value="monsterid" />
+						<menuitem label="IdentIcon" value="identicon" />
+						<menuitem label="wAvatar" value="wavatar" />
+						<menuitem label="No Picture"
+							value="404" />
+					</menupopup>
+				</menulist>
+			</row>
+			<row>
+				<label value="Update Thunderbird AdressBook Images"/>
+				<checkbox preference="updateABPic"
+					tooltiptext="Update Thurderbird's adressbook with images from SocialMail" />
+			</row>
+			</rows>
+					
+			</grid>
+			
+			<hbox>
+				<label value="Messages to search for recent conversations" />
+				<textbox preference="msgQueryLimit" id="msgQueryLimitField"
+					size="3" maxlength="3" />
+			</hbox>
+			<vbox>
+			
+				<label value="Front Tab Options"/>
+				<checkbox label="Show Social Networks" preference="do_Socials"
+					tooltiptext="Show Social Networks" />
+				<checkbox label="Show Address Book Phone numbers" preference="do_PhoneAB"
+					tooltiptext="Show Address Book phone numbers"/>
+				<checkbox label="Show Collected Phone numbers" preference="do_PhoneCollected"
+					tooltiptext="Show Collected phone numbers from previous emails"/>
+				<checkbox label="Show Previous Emails" preference="do_PrevEmails"
+					tooltiptext="Show Previous Conversations" />
+				<checkbox label="Show Exchanged Files" preference="do_Files"
+					tooltiptext="Show Exchanged Files" />
+				<checkbox label="Show Address Book URLs" preference="do_URLAB"
+					tooltiptext="Show URLs from Address Books" />
+				<checkbox label="Show Exchanged URLs" preference="do_URLs"
+					tooltiptext="Show Exchanged URLs" />
+			</vbox>
+
+		</vbox>
+		<!-- GUI Elements... -->
+	</prefpane>
+
+	<prefpane id="smPrefs_Skype" label="Skype options"
+		image="chrome://socialmail/content/media/SkypeBlue_32x32.png">
+		<preferences>
+			<!-- see the next section for more information -->
+			<preference id="skype_enabled" name="extensions.socialmail.skype.enabled"
+				type="bool" />
+			<preference id="skype_defaultCC" name="extensions.socialmail.skype.defaultCC"
+				type="string" />
+
+		</preferences>
+		<hbox class="inset">
+			<checkbox
+				label="Skype Enabled? Skype needs to be installed for Skype functions to work"
+				preference="skype_enabled" id="apiKeyField" />
+		</hbox>
+		<vbox class="inset">
+			<hbox>
+				<label value="Default Country Code" />
+				<menulist preference="skype_defaultCC"
+					tooltiptext="CountryCode to use for skype calls when none is specified">
+					<menupopup>
+						<menuitem label='Afghanistan' value='93' />
+						<menuitem label='Albania' value='355' />
+						<menuitem label='Algeria' value='213' />
+						<menuitem label='American Samoa' value='1 684' />
+						<menuitem label='Andorra' value='376' />
+						<menuitem label='Angola' value='244' />
+						<menuitem label='Anguilla' value='1 264' />
+						<menuitem label='Antarctica' value='672' />
+						<menuitem label='Antigua and Barbuda' value='1 268' />
+						<menuitem label='Argentina' value='54' />
+						<menuitem label='Armenia' value='374' />
+						<menuitem label='Aruba' value='297' />
+						<menuitem label='Australia' value='61' />
+						<menuitem label='Austria' value='43' />
+						<menuitem label='Azerbaijan' value='994' />
+						<menuitem label='Bahamas' value='1 242' />
+						<menuitem label='Bahrain' value='973' />
+						<menuitem label='Bangladesh' value='880' />
+						<menuitem label='Barbados' value='1 246' />
+						<menuitem label='Belarus' value='375' />
+						<menuitem label='Belgium' value='32' />
+						<menuitem label='Belize' value='501' />
+						<menuitem label='Benin' value='229' />
+						<menuitem label='Bermuda' value='1 441' />
+						<menuitem label='Bhutan' value='975' />
+						<menuitem label='Bolivia' value='591' />
+						<menuitem label='Bosnia and Herzegovina' value='387' />
+						<menuitem label='Botswana' value='267' />
+						<menuitem label='Brazil' value='55' />
+						<menuitem label='British Virgin Islands' value='1 284' />
+						<menuitem label='Brunei' value='673' />
+						<menuitem label='Bulgaria' value='359' />
+						<menuitem label='Burkina Faso' value='226' />
+						<menuitem label='Burma (Myanmar)' value='95' />
+						<menuitem label='Burundi' value='257' />
+						<menuitem label='Cambodia' value='855' />
+						<menuitem label='Cameroon' value='237' />
+						<menuitem label='Canada' value='1 ' />
+						<menuitem label='Cape Verde' value='238' />
+						<menuitem label='Cayman Islands' value='1 345' />
+						<menuitem label='Central African Republic' value='236' />
+						<menuitem label='Chad' value='235' />
+						<menuitem label='Chile' value='56' />
+						<menuitem label='China' value='86' />
+						<menuitem label='Christmas Island' value='61' />
+						<menuitem label='Cocos (Keeling) Islands' value='61' />
+						<menuitem label='Colombia' value='57' />
+						<menuitem label='Comoros' value='269' />
+						<menuitem label='Republic of the Congo' value='242' />
+						<menuitem label='Democratic Republic of the Congo' value='243' />
+						<menuitem label='Cook Islands' value='682' />
+						<menuitem label='Costa Rica' value='506' />
+						<menuitem label='Croatia' value='385' />
+						<menuitem label='Cuba' value='53' />
+						<menuitem label='Cyprus' value='357' />
+						<menuitem label='Czech Republic' value='420' />
+						<menuitem label='Denmark' value='45' />
+						<menuitem label='Djibouti' value='253' />
+						<menuitem label='Dominica' value='1 767' />
+						<menuitem label='Dominican Republic' value='1 809' />
+						<menuitem label='East Timor' value='670' />
+						<menuitem label='Ecuador' value='593' />
+						<menuitem label='Egypt' value='20' />
+						<menuitem label='El Salvador' value='503' />
+						<menuitem label='Equatorial Guinea' value='240' />
+						<menuitem label='Eritrea' value='291' />
+						<menuitem label='Estonia' value='372' />
+						<menuitem label='Ethiopia' value='251' />
+						<menuitem label='Falkland Islands' value='500' />
+						<menuitem label='Faroe Islands' value='298' />
+						<menuitem label='Fiji' value='679' />
+						<menuitem label='Finland' value='358' />
+						<menuitem label='France' value='33' />
+						<menuitem label='French Polynesia' value='689' />
+						<menuitem label='Gabon' value='241' />
+						<menuitem label='Gambia' value='220' />
+						<menuitem label='Gaza Strip' value='970' />
+						<menuitem label='Georgia' value='995' />
+						<menuitem label='Germany' value='49' />
+						<menuitem label='Ghana' value='233' />
+						<menuitem label='Gibraltar' value='350' />
+						<menuitem label='Greece' value='30' />
+						<menuitem label='Greenland' value='299' />
+						<menuitem label='Grenada' value='1 473' />
+						<menuitem label='Guam' value='1 671' />
+						<menuitem label='Guatemala' value='502' />
+						<menuitem label='Guinea' value='224' />
+						<menuitem label='Guinea-Bissau' value='245' />
+						<menuitem label='Guyana' value='592' />
+						<menuitem label='Haiti' value='509' />
+						<menuitem label='Honduras' value='504' />
+						<menuitem label='Hong Kong' value='852' />
+						<menuitem label='Hungary' value='36' />
+						<menuitem label='Iceland' value='354' />
+						<menuitem label='India' value='91' />
+						<menuitem label='Indonesia' value='62' />
+						<menuitem label='Iran' value='98' />
+						<menuitem label='Iraq' value='964' />
+						<menuitem label='Ireland' value='353' />
+						<menuitem label='Isle of Man' value='44' />
+						<menuitem label='Israel' value='972' />
+						<menuitem label='Italy' value='39' />
+						<menuitem label='Ivory Coast' value='225' />
+						<menuitem label='Jamaica' value='1 876' />
+						<menuitem label='Japan' value='81' />
+						<menuitem label='Jordan' value='962' />
+						<menuitem label='Kazakhstan' value='7' />
+						<menuitem label='Kenya' value='254' />
+						<menuitem label='Kiribati' value='686' />
+						<menuitem label='Kosovo' value='381' />
+						<menuitem label='Kuwait' value='965' />
+						<menuitem label='Kyrgyzstan' value='996' />
+						<menuitem label='Laos' value='856' />
+						<menuitem label='Latvia' value='371' />
+						<menuitem label='Lebanon' value='961' />
+						<menuitem label='Lesotho' value='266' />
+						<menuitem label='Liberia' value='231' />
+						<menuitem label='Libya' value='218' />
+						<menuitem label='Liechtenstein' value='423' />
+						<menuitem label='Lithuania' value='370' />
+						<menuitem label='Luxembourg' value='352' />
+						<menuitem label='Macau' value='853' />
+						<menuitem label='Macedonia' value='389' />
+						<menuitem label='Madagascar' value='261' />
+						<menuitem label='Malawi' value='265' />
+						<menuitem label='Malaysia' value='60' />
+						<menuitem label='Maldives' value='960' />
+						<menuitem label='Mali' value='223' />
+						<menuitem label='Malta' value='356' />
+						<menuitem label='Marshall Islands' value='692' />
+						<menuitem label='Mauritania' value='222' />
+						<menuitem label='Mauritius' value='230' />
+						<menuitem label='Mayotte' value='269' />
+						<menuitem label='Mexico' value='52' />
+						<menuitem label='Micronesia' value='691' />
+						<menuitem label='Moldova' value='373' />
+						<menuitem label='Monaco' value='377' />
+						<menuitem label='Mongolia' value='976' />
+						<menuitem label='Montenegro' value='382' />
+						<menuitem label='Montserrat' value='1 664' />
+						<menuitem label='Morocco' value='212' />
+						<menuitem label='Mozambique' value='258' />
+						<menuitem label='Namibia' value='264' />
+						<menuitem label='Nauru' value='674' />
+						<menuitem label='Nepal' value='977' />
+						<menuitem label='Netherlands' value='31' />
+						<menuitem label='Netherlands Antilles' value='599' />
+						<menuitem label='New Caledonia' value='687' />
+						<menuitem label='New Zealand' value='64' />
+						<menuitem label='Nicaragua' value='505' />
+						<menuitem label='Niger' value='227' />
+						<menuitem label='Nigeria' value='234' />
+						<menuitem label='Niue' value='683' />
+						<menuitem label='Norfolk Island' value='672' />
+						<menuitem label='Northern Mariana Islands' value='1 670' />
+						<menuitem label='North Korea' value='850' />
+						<menuitem label='Norway' value='47' />
+						<menuitem label='Oman' value='968' />
+						<menuitem label='Pakistan' value='92' />
+						<menuitem label='Palau' value='680' />
+						<menuitem label='Panama' value='507' />
+						<menuitem label='Papua New Guinea' value='675' />
+						<menuitem label='Paraguay' value='595' />
+						<menuitem label='Peru' value='51' />
+						<menuitem label='Philippines' value='63' />
+						<menuitem label='Pitcairn Islands' value='64' />
+						<menuitem label='Poland' value='48' />
+						<menuitem label='Portugal' value='351' />
+						<menuitem label='Puerto Rico' value='1  ' />
+						<menuitem label='Qatar' value='974' />
+						<menuitem label='Romania' value='40' />
+						<menuitem label='Russia' value='7' />
+						<menuitem label='Rwanda' value='250' />
+						<menuitem label='Saint Barthelemy' value='590' />
+						<menuitem label='Samoa' value='685' />
+						<menuitem label='San Marino' value='378' />
+						<menuitem label='Sao Tome and Principe' value='239' />
+						<menuitem label='Saudi Arabia' value='966' />
+						<menuitem label='Senegal' value='221' />
+						<menuitem label='Serbia' value='381' />
+						<menuitem label='Seychelles' value='248' />
+						<menuitem label='Sierra Leone' value='232' />
+						<menuitem label='Singapore' value='65' />
+						<menuitem label='Slovakia' value='421' />
+						<menuitem label='Slovenia' value='386' />
+						<menuitem label='Solomon Islands' value='677' />
+						<menuitem label='Somalia' value='252' />
+						<menuitem label='South Africa' value='27' />
+						<menuitem label='South Korea' value='82' />
+						<menuitem label='Spain' value='34' />
+						<menuitem label='Sri Lanka' value='94' />
+						<menuitem label='Saint Helena' value='290' />
+						<menuitem label='Saint Kitts and Nevis' value='1 869' />
+						<menuitem label='Saint Lucia' value='1 758' />
+						<menuitem label='Saint Martin' value='1 599' />
+						<menuitem label='Saint Pierre and Miquelon' value='508' />
+						<menuitem label='Saint Vincent and the Grenadines' value='1 784' />
+						<menuitem label='Sudan' value='249' />
+						<menuitem label='Suriname' value='597' />
+						<menuitem label='Swaziland' value='268' />
+						<menuitem label='Sweden' value='46' />
+						<menuitem label='Switzerland' value='41' />
+						<menuitem label='Syria' value='963' />
+						<menuitem label='Taiwan' value='886' />
+						<menuitem label='Tajikistan' value='992' />
+						<menuitem label='Tanzania' value='255' />
+						<menuitem label='Thailand' value='66' />
+						<menuitem label='Togo' value='228' />
+						<menuitem label='Tokelau' value='690' />
+						<menuitem label='Tonga' value='676' />
+						<menuitem label='Trinidad and Tobago' value='1 868' />
+						<menuitem label='Tunisia' value='216' />
+						<menuitem label='Turkey' value='90' />
+						<menuitem label='Turkmenistan' value='993' />
+						<menuitem label='Turks and Caicos Islands' value='1 649' />
+						<menuitem label='Tuvalu' value='688' />
+						<menuitem label='United Arab Emirates' value='971' />
+						<menuitem label='Uganda' value='256' />
+						<menuitem label='United Kingdom' value='44' />
+						<menuitem label='Ukraine' value='380' />
+						<menuitem label='Uruguay' value='598' />
+						<menuitem label='United States' value='1' />
+						<menuitem label='Uzbekistan' value='998' />
+						<menuitem label='Vanuatu' value='678' />
+						<menuitem label='Holy See (Vatican City)' value='39' />
+						<menuitem label='Venezuela' value='58' />
+						<menuitem label='Vietnam' value='84' />
+						<menuitem label='US Virgin Islands' value='1 340' />
+						<menuitem label='Wake Island' value='808' />
+						<menuitem label='Wallis and Futuna' value='681' />
+						<menuitem label='West Bank' value='970' />
+						<menuitem label='Yemen' value='967' />
+						<menuitem label='Zambia' value='260' />
+						<menuitem label='Zimbabwe' value='263' />
+					</menupopup>
+				</menulist>
+			</hbox>
+		</vbox>
+	</prefpane>
+
+	<prefpane id="smPrefs_Twitter" label="Twitter options"
+		image="chrome://socialmail/content/media/twitter.png">
+		<preferences>
+			<!-- see the next section for more information -->
+			<preference id="enabled" name="extensions.socialmail.twitter.enabled"
+				type="bool" />
+			<preference id="frontTab" name="extensions.socialmail.twitter.frontTab"
+				type="bool" />
+			<preference id="username" name="extensions.socialmail.twitter.username"
+				type="string" />
+			<preference id="accessToken" name="extensions.socialmail.twitter.accessToken"
+				type="string" />	
+			<preference id="accessTokenSecret" name="extensions.socialmail.twitter.accessTokenSecret"
+				type="string" />
+			<preference id="numTweets" name="extensions.socialmail.twitter.numTweets"
+				type="int" />
+			<preference id="updateStatus" name="extensions.socialmail.twitter.updateStatus"
+				type="bool" />
+				
+
+		</preferences>
+		<script type="application/x-javascript" src="chrome://socialmail/content/modules/twitterPrefs.js" />
+		<hbox class="inset">
+			<label value="Enable Twitter?" />
+			<checkbox preference="enabled" id="twitEnabled" />
+		</hbox>
+		<vbox class="inset">
+			<label value="Twitter Options" />
+			<grid>
+				<columns>
+					<column flex="1" />
+					<column flex="2" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Screen Name" tooltiptext="Set during Twitter authorisation"/>
+						<textbox preference="username" size="40" id="sm_tw_username" disabled="true" />
+				
+					</row>
+					
+					<description>In order for twitter to function correctly you must authorise SocialMail to access twitter on your behalf</description>
+					<row>
+						<label value="Step 1 - Get PIN"/>
+						<vbox>
+							<description>You will be send to twitter.com and asked to authentication and approve SocialMail</description>
+							<button label="Click Here" oncommand="com.networklighthouse.socialMail.twitterPrefs.requestOAuthToken()"/>
+						</vbox>
+					</row>
+					<row>
+						<label value="Step 2 - Enter PIN"/>
+						<vbox>
+							<description>Enter the PIN you were given from twitter.com and click the button to complete the process</description>
+							<textbox id="sm_tw_oathPin" maxlength="7" size="7"/>
+							<button id="sm_tw_step2btn" label="Click Here"  oncommand="com.networklighthouse.socialMail.twitterPrefs.requestOAuthAccess()" disabled="true"/>
+						</vbox>
+					</row>		
+					<row>
+						<label value="Show last Tweet on the front tab?" />
+						<checkbox preference="frontTab"/>
+					</row>
+					<row>
+						<label value="Number of tweets to fetch" />
+						<hbox flex="1">
+						<scale preference="numTweets" preference-editable="true" min="1" max="200" id="tweetScale" flex="1"/>
+						<label width="25" flex="0">
+							<observes element="tweetScale" attribute="value"/>
+						</label>
+						</hbox>
+					</row>
+					<row>
+						<label value="Use Twitter to post Status Updates"/>
+						<checkbox preference="updateStatus" id="twitUpdater" />
+					</row>
+				</rows>
+			</grid>
+		</vbox>
+	</prefpane>
+
+
+</prefwindow>
+

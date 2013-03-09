@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/subversion/!svn/ver/353/SocialMail/srcExtension/chrome/resources
+END
+oauth.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/subversion/!svn/ver/323/SocialMail/srcExtension/chrome/resources/oauth.js
+END
+oauthTokenMgr.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/subversion/!svn/ver/323/SocialMail/srcExtension/chrome/resources/oauthTokenMgr.js
+END
+linkedInHelper.jsm
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/subversion/!svn/ver/327/SocialMail/srcExtension/chrome/resources/linkedInHelper.jsm
+END
+sha1.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/subversion/!svn/ver/321/SocialMail/srcExtension/chrome/resources/sha1.js
+END
+twitterHelper.jsm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/subversion/!svn/ver/353/SocialMail/srcExtension/chrome/resources/twitterHelper.jsm
+END

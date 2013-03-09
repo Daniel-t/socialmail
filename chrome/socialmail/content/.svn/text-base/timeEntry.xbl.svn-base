@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<bindings xmlns="http://www.mozilla.org/xbl"
+    xmlns:xbl="http://www.mozilla.org/xbl"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<binding id="default" extends="chrome://global/content/bindings/listbox.xml#listitem" >
+	
+
+
+		<resources>
+		
+		<stylesheet src="chrome://socialmail/content/timeEntry.css"/>
+		<stylesheet src="chrome://global/skin/listbox.css"/>
+		</resources>
+
+		<content pack="center" >
+			<xul:richlistitem flex="1">
+			<xul:hbox flex="1" class="entryBox">
+				<xul:vbox>
+					<xul:spacer flex="1" />
+					<xul:image src="chrome://socialmail/content/media/logo16.bmp" xbl:inherits="src=image" class="entryBoxImage"/>
+					<xul:spacer flex="1" />
+				</xul:vbox>
+				<xul:vbox flex="1" class="descBox">
+					<xul:description flex="1" xbl:inherits="xbl:text=value" crop="end" ></xul:description>
+					<xul:hbox>
+						<xul:spacer flex="1"/>
+						<xul:label class="dateText" value="" xbl:inherits="value=date"/>
+					</xul:hbox>
+				</xul:vbox>
+			</xul:hbox>
+			</xul:richlistitem>
+		</content>
+
+
+
+		<implementation>
+
+
+
+
+			<constructor>
+				<![CDATA[
+/**
+ * The code below will be called one time only after
+ * the binding is successfully prepared and bound.
+ * "this" in this context refers to the bound element.
+ */
+
+ // your code goes here
+
+]]>
+			</constructor>
+
+
+
+			<destructor>
+				<![CDATA[
+/**
+ * The code below will be called one time only before
+ * binding is unbound. You cannot cancel this event,
+ * but you may accomplish some last minute clean up.
+ * "this" in this context refers to the bound element.
+ */
+
+ // your code goes here
+
+]]>
+			</destructor>
+
+
+		</implementation>
+
+
+
+		<handlers>
+
+
+
+
+			<handler event="click">
+				<![CDATA[
+ if (this.getAttribute("url") == "") {
+//do nothing
+ }
+ else {
+ //this is a URL, better launch it
+	 com.networklighthouse.socialMail.launchURL(this.getAttribute("url"));
+ }
+
+]]>
+			</handler>
+
+
+
+
+		</handlers>
+
+
+
+	</binding>
+
+</bindings>

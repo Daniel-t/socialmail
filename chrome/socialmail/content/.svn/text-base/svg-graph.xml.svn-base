@@ -1,0 +1,103 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+<bindings xmlns="http://www.mozilla.org/xbl"
+	xmlns:xbl="http://www.mozilla.org/xbl"
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<binding id="graph" >
+		<content>
+			<xul:hbox class="box-inherit"
+				xbl:inherits="align,dir,pack,orient" align="center" pack="center"
+				flex="1">
+				<svg:svg anonid="svg-graph-box" width="150px"
+					height="100px">
+					<svg:g>
+						<svg:rect x="0" y="0" width="100%" height="100"
+							rx="2" ry="2"
+							style="stroke: #000000; stroke-width: 1; fill: #cccccc;" />
+						<svg:rect x="0" y="0" width="25%" height="100"
+							rx="2" ry="2"
+							style="stroke: #000000; stroke-width: 1; fill: #aaaaaa;" />
+						<svg:rect x="75%" y="0" width="25%" height="100"
+							rx="2" ry="2"
+							style="stroke: #000000; stroke-width: 1; fill: #aaaaaa;" />
+
+						<svg:rect x="0" y="0" width="4%" height="0%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat1"/>
+						<svg:rect x="4%" y="0" width="4%" height="10%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat2"/>
+						<svg:rect x="8%" y="0" width="4%" height="20%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat3"/>
+						<svg:rect x="12%" y="0" width="4%" height="30%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat4"/>
+						<svg:rect x="16%" y="0" width="4%" height="40%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat5"/>
+						<svg:rect x="20%" y="0" width="5%" height="50%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat6"/>
+						<svg:rect x="25%" y="0" width="4%" height="60%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat7"/>
+						<svg:rect x="29%" y="0" width="4%" height="70%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat8"/>
+						<svg:rect x="33%" y="0" width="4%" height="80%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat9"/>
+						<svg:rect x="37%" y="0" width="4%" height="85%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat10"/>
+						<svg:rect x="41%" y="0" width="4%" height="90%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat11"/>
+						<svg:rect x="45%" y="0" width="5%" height="95%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat12"/>
+						<svg:rect x="50%" y="0" width="5%" height="100%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat13"/>
+						<svg:rect x="55%" y="0" width="4%" height="95%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat14"/>
+						<svg:rect x="59%" y="0" width="4%" height="90%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat15"/>
+						<svg:rect x="63%" y="0" width="4%" height="85%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat16"/>
+						<svg:rect x="67%" y="0" width="4%" height="80%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat17"/>
+						<svg:rect x="71%" y="0" width="5%" height="70%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat18"/>
+						<svg:rect x="76%" y="0" width="4%" height="60%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat19"/>
+						<svg:rect x="80%" y="0" width="4%" height="50%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat20"/>
+						<svg:rect x="84%" y="0" width="4%" height="40%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat21"/>
+						<svg:rect x="88%" y="0" width="4%" height="30%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat22"/>
+						<svg:rect x="92%" y="0" width="4%" height="20%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat23"/>
+						<svg:rect x="96%" y="0" width="4%" height="10%"
+							style="stroke: #0000FF; stroke-width: 1; fill: #0000aa;" anonid="sm_emailStat24"/>
+							
+							
+							
+					</svg:g>
+				</svg:svg>
+			</xul:hbox>
+
+		</content>
+		<implementation>
+			<method name="setValues">
+	      		<parameter name="values"/>
+			    <body>
+			    <![CDATA[
+			    	debugger;
+					offset=7;
+					for (hr=0;hr<=23;hr++){
+						count=hr+1;
+						item=document.getAnonymousElementByAttribute(this, "anonid", "sm_emailStat"+count);				
+						//item.y=values[hr];
+						item.setAttribute("y",100-values[hr]);
+						item.setAttribute("height","100%");
+					};	
+				]]>
+			    </body>
+		    </method>
+		</implementation>
+
+		<handlers></handlers>
+	</binding>
+</bindings>

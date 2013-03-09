@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet href="chrome://socialmail/content/socialMail.css" type="text/css"?>
+
+<overlay id="socialMailOverlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://socialmail/content/socialMail.js" />
+
+	<hbox id="tabmail-container">
+		<splitter id="socialMailSplitter" collapse="after">
+			<spring flex="1" />
+			<grippy />
+			<spring flex="1" />
+		</splitter>
+
+		<vbox id="socialMailPane" maxwidth="240">
+			<menupopup id="sm_contextMenuTweet">
+				<menuitem id="sm_ctxt_tweetReply" label="Reply"
+					oncommand="com.networklighthouse.socialMail.twitter.ui.reply(document.popupNode)" />		
+				<menuitem id="sm_ctxt_retweet" label="Retweet"
+					oncommand="com.networklighthouse.socialMail.twitter.ui.retweet(document.popupNode)" />
+				<menuitem id="sm_ctxt_copy" label="Copy"
+					oncommand="com.networklighthouse.socialMail.ui.copy(document.popupNode)" />
+			</menupopup>
+			<menupopup id="sm_contextMenuEmail">
+				<menuitem id="sm_ctxt_openConv" label="Open Conversation"
+					oncommand="com.networklighthouse.socialMail.ui.openConversation(document.popupNode)" />
+				<menuitem id="sm_ctxt_copy" label="Copy"
+					oncommand="com.networklighthouse.socialMail.ui.copy(document.popupNode)" />
+			</menupopup>
+			<menupopup id="sm_contextMenuAttachment">
+				<menuitem id="sm_ctxt_openConv" label="Open Message"
+					oncommand="com.networklighthouse.socialMail.ui.openMessage(document.popupNode)" />
+				<menuitem id="sm_ctxt_openContact" label="Open Contact Search"
+					oncommand="com.networklighthouse.socialMail.ui.openContactView(document.popupNode)" />
+				<menuitem id="sm_ctxt_openFile" label="Open File"
+					oncommand="com.networklighthouse.socialMail.ui.openFile(document.popupNode)" />
+				<menuitem id="sm_ctxt_saveFile" label="Save File"
+					oncommand="com.networklighthouse.socialMail.ui.saveFile(document.popupNode)" />
+			</menupopup>
+			<menupopup id="sm_contextMnuPhones">
+				<menuitem id="sm_ctxt_skype" label="Call with Skype"
+					oncommand="com.networklighthouse.socialMail.ui.skypeCall(document.popupNode)" />
+				<menu id="sm_ctxt_assignMenu" label="Assign to...">
+				<menupopup>
+					<menuitem label="Work"
+						oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'work')" />
+					<menuitem label="Home"
+						oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'home')" />
+					<menuitem label="Mobile"
+						oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'mobile')" />
+				</menupopup>
+				</menu>
+				<menuitem id="sm_ctxt_copy" label="Copy"
+					oncommand="com.networklighthouse.socialMail.ui.copy(document.popupNode)" />
+				<menuitem id="sm_ctxt_add" label="Add"
+					oncommand="com.networklighthouse.socialMail.ui.addEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_modify" label="Modify"
+					oncommand="com.networklighthouse.socialMail.ui.modifyEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_remove" label="Remove"
+					oncommand="com.networklighthouse.socialMail.ui.removeEntry(document.popupNode)" />
+			</menupopup>
+			
+			<menupopup id="sm_contextMenuURLs"
+				onpopupshowing="com.networklighthouse.socialMail.ui.contextMnuShow(document.popupNode)">
+				<menuitem id="sm_ctxt_openLink" label="Open Link"
+					oncommand="com.networklighthouse.socialMail.ui.openLink(document.popupNode)" />
+				<menuitem id="sm_ctxt_skype" label="Call with Skype"
+					oncommand="com.networklighthouse.socialMail.ui.skypeCall(document.popupNode)" />
+				<menu id="sm_ctxt_urlAssignMenu" label="Assign to...">
+					<menupopup>
+						<menuitem label="Work"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'workURL')" />
+						<menuitem label="Home"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'homeURL')" />
+					</menupopup>
+				</menu>
+				<menuitem id="sm_ctxt_copy" label="Copy"
+					oncommand="com.networklighthouse.socialMail.ui.copy(document.popupNode)" />
+				<menuitem id="sm_ctxt_add" label="Add"
+					oncommand="com.networklighthouse.socialMail.ui.addEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_modify" label="Modify"
+					oncommand="com.networklighthouse.socialMail.ui.modifyEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_remove" label="Remove"
+					oncommand="com.networklighthouse.socialMail.ui.removeEntry(document.popupNode)" />
+			</menupopup>
+			
+			<menupopup id="sm_contextMenu"
+				onpopupshowing="com.networklighthouse.socialMail.ui.contextMnuShow(document.popupNode)">
+				<menuitem id="sm_ctxt_openLink" label="Open Link"
+					oncommand="com.networklighthouse.socialMail.ui.openLink(document.popupNode)" />
+				<menuitem id="sm_ctxt_openConv" label="Open Conversation"
+					oncommand="com.networklighthouse.socialMail.ui.openConversation(document.popupNode)" />
+				<menuitem id="sm_ctxt_openContact" label="Open Contact Search"
+					oncommand="com.networklighthouse.socialMail.ui.openContactView(document.popupNode)" />
+				<menuitem id="sm_ctxt_openFile" label="Open File"
+					oncommand="com.networklighthouse.socialMail.ui.openFile(document.popupNode)" />
+				<menuitem id="sm_ctxt_saveFile" label="Save File"
+					oncommand="com.networklighthouse.socialMail.ui.saveFile(document.popupNode)" />
+				<menuitem id="sm_ctxt_skype" label="Call with Skype"
+					oncommand="com.networklighthouse.socialMail.ui.skypeCall(document.popupNode)" />
+				<menuitem id="sm_ctxt_tweetReply" label="Reply"
+					oncommand="com.networklighthouse.socialMail.twitter.ui.reply(document.popupNode)" />		
+				<menuitem id="sm_ctxt_retweet" label="Retweet"
+					oncommand="com.networklighthouse.socialMail.twitter.ui.retweet(document.popupNode)" />
+				<menu id="sm_ctxt_assignMenu" label="Assign to...">
+					<menupopup>
+						<menuitem label="Work"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'work')" />
+						<menuitem label="Home"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'home')" />
+						<menuitem label="Mobile"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'mobile')" />
+					</menupopup>
+				</menu>
+				<menu id="sm_ctxt_urlAssignMenu" label="Assign to...">
+					<menupopup>
+						<menuitem label="Work"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'workURL')" />
+						<menuitem label="Home"
+							oncommand="com.networklighthouse.socialMail.ui.assignNumber(document.popupNode,'homeURL')" />
+					</menupopup>
+				</menu>
+				<menuitem id="sm_ctxt_copy" label="Copy"
+					oncommand="com.networklighthouse.socialMail.ui.copy(document.popupNode)" />
+				<menuitem id="sm_ctxt_add" label="Add"
+					oncommand="com.networklighthouse.socialMail.ui.addEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_modify" label="Modify"
+					oncommand="com.networklighthouse.socialMail.ui.modifyEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_remove" label="Remove"
+					oncommand="com.networklighthouse.socialMail.ui.removeEntry(document.popupNode)" />
+				<menuitem id="sm_ctxt_BadCtxt" label="Unknown Context" />
+			</menupopup>
+			<sidebarheader>
+				<panel id="sm_PicPopup">
+					<hbox>
+						<label value="Select Image Source" />
+						<menulist id="sm_picSelector"
+							oncommand="com.networklighthouse.socialMail.ui.actuators.changePic(this)"
+							tooltiptext="Select which source to retreive profile image from for this contact">
+							<menupopup>
+								<menuitem label='LinkedIn' value='linkedin' />
+								<menuitem label='GrAvatar' value='gravatar' />
+							</menupopup>
+						</menulist>
+					</hbox>
+				</panel>
+				<panel id="sm_PostUpdatePnl" position="before_end">
+					<vbox>
+						<hbox><label value="Post Update"/> <spacer flex="1"/> <label id="sm_post_length"/></hbox>
+						<textbox id="sm_update_text" multiline="true" value="" maxlength="140" newlines="replacewithspaces"
+									oncommand="com.networklighthouse.socialMail.ui.updateStatus()" 
+									oninput="document.getElementById('sm_post_length').setAttribute('value','('+this.value.length+')')"
+									tooltiptext="" onkeypress="return com.networklighthouse.socialMail.ui.checkLength(event)"/>
+						<button oncommand="com.networklighthouse.socialMail.ui.updateStatus()" label="Post"/>
+					</vbox>
+				</panel>
+				<panel id="sm_SocialPanel" noautohide="true">
+					<hbox><spacer flex="1" /><label value="Manage Social Networks" /><spacer flex="1" /></hbox>
+					<grid>
+						<columns>
+							<column width="25" />
+							<column flex="1" />
+							<column flex="1" />
+							<column flex="1" />
+							<column width="50" />
+						</columns>
+						<rows>
+							<row>
+								<label />
+								<label value="Site Name" />
+								<label value="Profile URL" />
+								<label value="Image URL" />
+								<label />
+							</row>
+						</rows>
+					</grid>
+					<grid>
+						<columns>
+							<column width="25" />
+							<column flex="1" />
+							<column flex="2" />
+							<column flex="2" />
+							<column width="50" />
+						</columns>
+						<rows id="sm_socialNetRows">
+						</rows>
+					</grid>
+					<hbox>
+						<button label="Add Social Network" oncommand="com.networklighthouse.socialMail.addSNPanelRow(null)"/>
+						<spacer flex="1" />
+						<button label="Save" oncommand="com.networklighthouse.socialMail.ui.updateSocialNets()"/>
+						<button label="Discover" oncommand="com.networklighthouse.socialMail.ui.launchDiscovery()"/>
+						<button label="Close" oncommand="this.parentNode.parentNode.hidePopup()" />
+					</hbox>
+				</panel>
+				<panel id="sm_twitterPanel"  maxwidth="400">
+					<hbox><spacer flex="1" /><label value="Twitter Details" /><spacer flex="1" /></hbox>
+					<grid>
+					<columns>
+						<column flex="1"/>
+						<column flex="4"/>
+					</columns>
+					<rows>
+						<row><label value="Name"/><hbox><label id="sm_twitterPnlName"/><label value=" / "/><label id="sm_twitterPnlScreenName"/></hbox></row>
+						<row><label value="Description"/><description id="sm_twitterPnlDesc"/></row>
+						<row><label value="Location"/><label id="sm_twitterPnlLocation"/></row>
+						<row><label value="Followers"/><label id="sm_twitterPnlFollowers"/></row>
+						<row><label value="Friends"/><label id="sm_twitterPnlFriends"/></row>
+						<row><label value="URL"/><label class="text-link" id="sm_twitterPnlURL" onclick="com.networklighthouse.socialMail.launchURL(this.value)"/></row>
+						<row><label value="Twitter Page"/><label class="text-link" id="sm_twitterURL" onclick="com.networklighthouse.socialMail.launchURL(this.value)"/></row>
+						<row><label value=""/><label id=""/></row>
+						<row><label value=""/><button label="Follow Now" id="sm_tw_follow" oncommand="com.networklighthouse.socialMail.twitter.ui.followContact()"/></row>
+						
+					</rows>
+					</grid>
+				</panel>
+				<label value="Social Mail" />
+			</sidebarheader>
+
+			<sidebarheader>
+				<description id="sm_name" crop="end" value="JOE BLOGGS"
+					width="225" />
+			</sidebarheader>
+			<hbox maxheight="100">		
+				<svg-graph id="sm_svggraph" flex="1"/>
+				<image id="sm_profilepic" width="100" minheight="100" popup="sm_PicPopup"
+					src="chrome://socialMail/content/media/logo100.png" onerror="com.networklighthouse.socialMail.sm_onImgError(this)" />
+			</hbox>
+			<hbox>
+				<label value="Sent / Received" />
+				<spacer flex="1" />
+				<label id="sm_sentCnt" value="0" />
+				<label value="/" />
+				<label id="sm_receivedCnt" value="0" />
+			</hbox>
+			<vbox id="sm_socialBox" class="sm_box" status="on">
+				<sidebarheader
+					onclick="com.networklighthouse.socialMail.ui.panelHdrClick(this)">
+					<label value="Social Networks" />
+					<spacer flex="1" />
+					<label value="[+]" popup="sm_SocialPanel" />
+					<!--XXX FIXME WOuld like to be able to have a panel for each SN,
+					Barrier: SN icons are created adhoc, need to be able to identify each at run time
+					use: details to twitter followers etc
+					Also should be able to handle multiple accounts for the same service
+					 -->
+				</sidebarheader>
+				<hbox id="sm_socials" align="center" pack="center" class="hoverParent">
+					<image src="http://www.twitter.com/favicon.ico"
+						onclick="com.networklighthouse.socialMail.launchURL('http://twitter.com/Daniel_Thomas')" />
+					<label value="Follow SocialMail's Author " />
+				</hbox>
+			</vbox>
+			<tabbox flex="1" id="sm_tabbox" style='overflow: auto;'>
+				<tabs id="sm_tabs">
+					<tab image="chrome://socialMail/content/media/clock.png" id="sm_timelineTab" tooltiptext="Timeline"/>
+					<tab image="chrome://socialMail/content/media/paperclip16.png" id="sm_emailTab" tooltiptext="Contacts and Attachments"/>
+					<tab image="chrome://socialMail/content/media/link16.png" id="sm_otherTab" tooltiptext="Links and Phone Numbers"/>
+				</tabs>
+				<tabpanels class="smtabs" flex="1" id="sm_tabpanels">
+					<tabpanel id="sm_timelineTab" orient="vertical">
+						<richlistbox flex="1" id="sm_timeline">
+						<!-- Consider making this a listbox -->
+							<timeEntry value="Visit SocialMail's Homepage" url="http://www.networklighthouse.com/socialmail?utm_medium=socialmail&amp;utm_source=splash" />
+							<timeEntry value="Checkout the Config Guide" url='http://www.networklighthouse.com/socialmail-installation-instructions?utm_medium=socialmail&amp;utm_source=splash'/>
+							<timeEntry value="Suggest a feature" url='http://www.getsatisfaction.com/networklighthouse'/>
+							
+						</richlistbox>
+						<hbox>
+						<button popup="sm_PostUpdatePnl" label="Post Update" class="sm_box" id="sm_ftUpdateBox"/>
+						</hbox>
+					
+					</tabpanel>
+					<!-- XXX FROM HERE
+					<tabpanel id="sm_recentBoxPanel">
+						<vbox flex="1">
+							<groupbox id="sm_ftNumbersBox" status="off">
+								<caption label="Phone numbers" />
+								<grid>
+									<columns>
+										<column flex="1"></column>
+										<column flex="2"></column>
+									</columns>
+									<rows id="sm_ftNumbers" class="hoverParent" context="sm_contextMenu" />
+								</grid>
+								<vbox id="sm_ftColNumbersBox" class="sm_box">
+									<label value="Recent Numbers" />
+									<vbox id="sm_ftColNumbers" class="hoverParent" context="sm_contextMenu" />
+								</vbox>
+							</groupbox>
+							<groupbox id="sm_ftConvBox">
+								<caption label="Latest Conversations" />
+								<listbox id="sm_ftConv" rows="2" class="hoverParent"
+									context="sm_contextMenu" />
+							</groupbox>
+							<groupbox id="sm_ftURLsBox" class="sm_box">
+								<caption label="URLs" />
+								<grid>
+									<columns>
+										<column flex="1"></column>
+										<column flex="2"></column>
+									</columns>
+									<rows id="sm_ftABURLs" class="hoverParent" context="sm_contextMenu" />
+								</grid>
+								<vbox id="sm_ftURLs" class="hoverParent" context="sm_contextMenu">
+									<label value="Visit SocialMail's Homepage"
+										onclick="com.networklighthouse.socialMail.launchURL('http://www.networklighthouse.com/socialmail?utm_medium=socialmail&amp;utm_source=splash')" />
+									<label value="Checkout the Config Guide"
+										onclick="com.networklighthouse.socialMail.launchURL('http://www.networklighthouse.com/socialmail-installation-instructions?utm_medium=socialmail&amp;utm_source=splash')" />
+									<label value="Suggest a feature"
+										onclick="com.networklighthouse.socialMail.launchURL('http://www.getsatisfaction.com/networklighthouse')" />
+								</vbox>
+							</groupbox>
+							<groupbox class="sm_box" id="sm_ftTweetBox" orient="vertical"
+								status="on">
+								<caption label="Last Tweet" />
+								<box id="sm_ftTweet" class="hoverParent" context="sm_contextMenu" />
+							</groupbox>
+							<spacer flex="1" />
+							<groupbox class="sm_box" id="sm_ftUpdateBox" orient="horizontal">
+								<caption label="Status Update" />
+								<textbox flex="1" id="sm_statusTxt" maxlength="140" newlines="replacewithspaces"
+									oncommand="com.networklighthouse.socialMail.ui.updateStatus()" 
+									oninput="this.setAttribute('tooltiptext',this.value+ ' ('+this.value.length+')')"
+									tooltiptext=""/>
+								<button label="P"
+									oncommand="com.networklighthouse.socialMail.ui.updateStatus()" />
+							</groupbox>
+						</vbox>
+					</tabpanel>
+					  STOP HERE -->
+					<tabpanel id="sm_emailBoxPanel">
+						<vbox flex="1">
+							<vbox id="sm_contactsBox" class="sm_box" flex="1" minheight="200">
+								<sidebarheader
+									onclick="com.networklighthouse.socialMail.ui.panelHdrClick(this)">
+									<label value="Contacts" />
+									<spacer flex="1" />
+									<label id="sm_contactListCnt" value="0" />
+
+								</sidebarheader>
+								<listbox id="sm_contactList" rows="1" flex="1"
+									class="sm_listbox hoverParent" context="sm_contextMenu" />
+							</vbox>
+
+				
+							<vbox id="sm_attachmentBox" class="sm_box" flex="1" minheight="200">
+								<sidebarheader
+									onclick="com.networklighthouse.socialMail.ui.panelHdrClick(this)">
+									<label value="Exchanged Files" />
+									<spacer flex="1" />
+									<label id="sm_attachmentListCnt" value="0" />
+								</sidebarheader>
+								<richlistbox rows="1" flex="1" id="sm_attachmentList" class="sm_listbox hoverParent">
+								</richlistbox>
+
+							</vbox>
+						</vbox>
+					</tabpanel>
+					<tabpanel id="sm_otherBoxPanel">
+						<vbox flex="1">
+							<vbox id="sm_contactBox" class="sm_box" flex="1">
+								<sidebarheader
+									onclick="com.networklighthouse.socialMail.ui.panelHdrClick(this)">
+									<label value="[+]" class="hover"
+										onclick="com.networklighthouse.socialMail.ui.addEntry(this.parentNode.nextSibling)" />
+									<label value="Phone Numbers" />
+									<spacer flex="1" />
+									<label id="sm_phoneListCnt" value="0" />
+								</sidebarheader>
+								<richlistbox id="sm_phoneList" rows="1" flex="1"
+									class="sm_listbox hoverParent" />
+							</vbox>
+							<vbox id="sm_urlBox" class="sm_box" status="on" flex="1">
+								<sidebarheader
+									onclick="com.networklighthouse.socialMail.ui.panelHdrClick(this)">
+									<label value="[+]" class="hover"
+										onclick="com.networklighthouse.socialMail.ui.addEntry(this.parentNode.nextSibling)" />
+									<label value="URLs" />
+									<spacer flex="1" />
+									<label id="sm_urlListCnt" value="0" class="hoverParent" />
+
+								</sidebarheader>
+								<richlistbox id="sm_urlList" rows="1" flex="1"
+									class="sm_listbox hoverParent" status="on">
+
+								</richlistbox>
+							</vbox>
+						</vbox>
+					</tabpanel>					 
+				</tabpanels>
+			</tabbox>
+			<vbox id="sm_errorBox" class="errorParent" status="off">
+			</vbox>
+		</vbox>
+
+	</hbox>
+</overlay>

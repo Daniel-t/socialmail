@@ -1,0 +1,5 @@
+content socialmail chrome/socialmail/content/
+skin socialmail global chrome/socialmail/skin/global/
+locale socialmail en-US chrome/socialmail/locale/en-US/
+overlay   chrome://messenger/content/messenger.xul   chrome://socialmail/content/socialMail.xul
+resource resources chrome/resources/
